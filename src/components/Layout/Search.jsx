@@ -1,24 +1,21 @@
 import { useState } from 'react'
 import { connect } from 'react-redux'
 
-import getUser from '../../services/getUser'
+import getUserData from '../../services/getUserData'
+import { changeUser, changeRepos, changeStars } from '../../store/actions'
 
 function Search({ user, dispatch }) {
   const [searcehdUser, setSearcehdUser] = useState('')
 
-  function changeUser(user) {
-    return{
-      type: 'CHANGE_USER',
-      user
-    }
-  }
-
   const handleSubmit = async e => {
     e.preventDefault()
-    await getUser(searcehdUser)
+
+    await getUserData(searcehdUser)
       .then((res) => {
-        dispatch(changeUser(res))
+        console.log(res)
+        dispatch(changeUser(res.user, res.repos, res.stars))
       })
+
     setSearcehdUser('')
   }
 
