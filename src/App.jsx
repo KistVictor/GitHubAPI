@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import Layout from './components/Layout'
-import Home from './view/Home'
+import Home from './view/home'
 
 function App() {
 

@@ -1,4 +1,5 @@
 import Header from './Header'
+import Footer from './footer'
 
 function Layout({ children }) {
 
@@ -6,11 +7,9 @@ function Layout({ children }) {
     <>
       <Header />
 
-      <main className='bg-gray-900 h-screen'>{children}</main>
+      {children}
 
-      <footer>
-        
-      </footer>
+      <Footer />
     </>
 	)
 }
