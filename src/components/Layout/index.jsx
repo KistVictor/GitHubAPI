@@ -6,7 +6,7 @@ function Layout({ children }) {
     <>
       <Header />
 
-      <main className='bg-gray-800 h-screen'>{children}</main>
+      <main className='bg-gray-900 h-screen'>{children}</main>
 
       <footer>
         

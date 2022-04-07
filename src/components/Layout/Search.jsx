@@ -17,7 +17,6 @@ function Search({ user, dispatch }) {
     e.preventDefault()
     await getUser(searcehdUser)
       .then((res) => {
-        console.log(res)
         dispatch(changeUser(res))
       })
     setSearcehdUser('')
@@ -28,7 +27,7 @@ function Search({ user, dispatch }) {
       <form onSubmit={e => handleSubmit(e)}>
         <input
           value={searcehdUser}
-          className='pl-2 text-sm w-64 h-6 bg-gray-800 rounded border border-gray-600 border-solid text-gray-50'
+          className='pl-2 text-sm w-64 h-6 bg-gray-900 rounded border border-gray-600 border-solid text-gray-50'
           type='text'
           onChange={e => setSearcehdUser(e.target.value)}
           placeholder='Search or jump to...'
