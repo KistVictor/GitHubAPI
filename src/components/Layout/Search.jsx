@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { connect } from 'react-redux'
 
 import getUserData from '../../services/getUserData'
-import { changeUser, changeRepos, changeStars } from '../../store/actions'
+import { changeUser } from '../../store/actions'
 
 function Search({ user, dispatch }) {
   const [searcehdUser, setSearcehdUser] = useState('')
@@ -12,7 +12,6 @@ function Search({ user, dispatch }) {
 
     await getUserData(searcehdUser)
       .then((res) => {
-        console.log(res)
         dispatch(changeUser(res.user, res.repos, res.stars))
       })
 

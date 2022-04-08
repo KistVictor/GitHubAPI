@@ -8,12 +8,9 @@ function Home({ user }) {
 	return(
     <main className='bg-gray-900 h-full pt-24'>
 
-      <div className='flex flex-row justify-center h-7 gap-5 w-full border-b border-gray-600 border-solid text-gray-50'>
-        <button className='hidden md:flex hover:scale-110 transition'>Repositories</button>
-        <button className='hidden md:flex hover:scale-110 transition'>Stars</button>
-      </div>
+      <div className='h-7 w-full border-b border-gray-600 border-solid' />
 
-      <div className='flex flex-col md:flex-row gap-5 mx-auto max-w-xs md:max-w-screen-md lg:max-w-screen-lg'>
+      <div className='flex flex-col md:flex-row items-center md:items-start gap-5 mx-auto max-w-xs md:max-w-screen-md lg:max-w-screen-lg'>
 
         <Aside />
         

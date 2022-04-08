@@ -8,7 +8,7 @@ function Aside({ user }) {
       <img
         className='w-64 h-64 mb-5 rounded-full border border-gray-600 border-solid'
         src={user.avatar_url}
-        alt=""
+        alt={user.name}
       />
 
       <h1 className='flex flex-col items-start mb-2'>
