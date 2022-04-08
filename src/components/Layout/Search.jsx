@@ -5,15 +5,16 @@ import getUserData from '../../services/getUserData'
 import { changeUser } from '../../store/actions'
 
 function Search({ user, dispatch }) {
-  const [searcehdUser, setSearcehdUser] = useState('')
+  const [searcehdUser, setSearcehdUser] = useState('kistvictor')
 
   const handleSubmit = async e => {
     e.preventDefault()
 
     await getUserData(searcehdUser)
-      .then((res) => {
-        dispatch(changeUser(res.user, res.repos, res.stars))
-      })
+    .then((res) => {
+      dispatch(changeUser(res.user, res.repos, res.stars))
+    })
+    .catch((err) => console.log("Um erro ocorreu: ", err))
 
     setSearcehdUser('')
   }
@@ -27,6 +28,7 @@ function Search({ user, dispatch }) {
           type='text'
           onChange={e => setSearcehdUser(e.target.value)}
           placeholder='Search or jump to...'
+          required
         />
       </form>
     </div>

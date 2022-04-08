@@ -1,7 +1,7 @@
 {
   "name": "teste",
   "version": "0.1.0",
-  "homepage": "https://KistVictor.github.io/GitHubAPI",
+  "homepage": "https://kistvictor.github.io/GitHubAPI/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

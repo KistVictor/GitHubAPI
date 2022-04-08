@@ -2,8 +2,15 @@ import { connect } from 'react-redux'
 
 import Aside from './Aside'
 import Content from './Content'
+import Waiting from '../Waiting'
 
 function Home({ user }) {
+
+  if (user.waiting) {
+    return (
+      <Waiting />
+    )
+  }
 
 	return(
     <main className='bg-gray-900 h-full pt-24'>
